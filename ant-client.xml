@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<project name="introsde-2016-assignment-3-client" default="execute.client" basedir=".">
+    <property file="${basedir}/src/main/resources/project.properties"/>
+    <property name="buildpath" value="${basedir}/target/${ant.project.name}" />
+
+    <target name="execute.client">
+        <java classname="introsde.client.PeopleClient" classpath="${buildpath}/WEB-INF/classes">
+            <arg value="${env}"/>
+            <arg value="${project.logfile}"/>
+            <classpath>
+                <fileset dir="${buildpath}/WEB-INF/lib">
+                    <include name="**/*.jar" />
+                    <include name="*.jar" />
+                </fileset>
+            </classpath>
+        </java>
+    </target>
+</project>

@@ -64,4 +64,10 @@ public class MeasureTypesResponse {
         return this.measureType;
     }
 
+    @Override
+    public String toString() {
+        return "MeasureTypesResponse{" +
+                "measureType=" + measureType +
+                '}';
+    }
 }
